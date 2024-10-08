@@ -1,3 +1,5 @@
+from migen import *
+
 import os.path
 __dir__ = os.path.split(os.path.abspath(os.path.realpath(__file__)))[0]
 data_location = __dir__
@@ -46,7 +48,19 @@ def data_file(f):
 class Ddr3:
     def __init__(self, platform):
         print("ddr3 init add sources at %s" % data_location)
+        platform.add_source(os.path.join(data_location, "BrianHG_DDR3_PHY_SEQ_v16.sv"))
+        platform.add_source(os.path.join(data_location, "BrianHG_DDR3_GEN_tCK.sv"))
+        platform.add_source(os.path.join(data_location, "BrianHG_DDR3_CMD_SEQUENCER_v16.sv"))
+        platform.add_source(os.path.join(data_location, "BrianHG_DDR3_CMD_SEQUENCER_v16.sv"))
+        platform.add_source(os.path.join(data_location, "BrianHG_DDR3_PLL.sv"))
+        platform.add_source(os.path.join(data_location, "BrianHG_DDR3_FIFOs.sv"))
+        platform.add_source(os.path.join(data_location, "BrianHG_DDR3_IO_PORT_ALTERA.sv"))
+        platform.add_source(os.path.join(data_location, "altera_gpio_lite.sv"))
         print("ddr3 init done?")
+        self.ddr = Instance("BrianHG_DDR3_PHY_SEQ_v16")
+    
+    def ddr(self):
+        return self.ddr
     
     def get_path(self):
         return data_location
