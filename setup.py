@@ -22,12 +22,9 @@ Python module containing hdl files for ddr3 master.""",
     ],
     python_requires='>=3.5',
     zip_safe=False,
-    packages=setuptools.find_packages(
-        where='.',
-        include=['BrianHG_DDR3*'],
-    ),
+    packages=setuptools.find_packages(),
     package_data={
-    	'brianhg_ddr3': ['BrianHG_DDR3/**'],
+    	'BrianHG_DDR3': ['**'],
     },
     include_package_data=True,
     project_urls={
