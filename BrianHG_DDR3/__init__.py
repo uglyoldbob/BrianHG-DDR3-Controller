@@ -57,10 +57,9 @@ class Ddr3:
         platform.add_source(os.path.join(data_location, "BrianHG_DDR3_IO_PORT_ALTERA.sv"))
         platform.add_source(os.path.join(data_location, "altera_gpio_lite.sv"))
         print("ddr3 init done?")
-        self.ddr = Instance("BrianHG_DDR3_PHY_SEQ_v16")
     
     def ddr(self):
-        return self.ddr
+        return "BrianHG_DDR3_PHY_SEQ_v16"
     
     def get_path(self):
         return data_location
