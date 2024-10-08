@@ -35,7 +35,6 @@ try:
 except ImportError:
     pass
 
-
 def data_file(f):
     """Get absolute path for file inside brianhg_ddr3."""
     fn = os.path.join(data_location, f)
@@ -43,3 +42,13 @@ def data_file(f):
     if not os.path.exists(fn):
         raise IOError("File {f} doesn't exist in brianhg_ddr3".format(f))
     return fn
+
+class Ddr3:
+    def __init__(self, platform):
+        print("ddr3 init")
+        platform.add_sources(path=data_location)
+        print("ddr3 init done?")
+    
+    def do_finalize(self):
+        print("ddr3 do finalize")
+        self.ddr3 = Instance("brianhg_ddr3")
