@@ -48,5 +48,5 @@ class Ddr3:
         print("ddr3 init add sources at %s" % data_location)
         print("ddr3 init done?")
     
-    def get_path():
+    def get_path(self):
         return data_location
