@@ -3,7 +3,7 @@ import setuptools
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
-from BrianHG_DDR3 import version_str
+version_str = "1.65"
 
 setuptools.setup(
     name="pythondata-brianhg-ddr3",
