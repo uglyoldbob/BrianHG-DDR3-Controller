@@ -1,6 +1,6 @@
 import os.path
 __dir__ = os.path.split(os.path.abspath(os.path.realpath(__file__)))[0]
-data_location = os.path.join(__dir__, "BrianHG_DDR3")
+data_location = __dir__
 src = "https://github.com/BrianHGinc/BrianHG-DDR3-Controller.git"
 
 # Module version
