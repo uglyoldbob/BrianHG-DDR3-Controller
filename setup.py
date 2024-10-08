@@ -5,6 +5,8 @@ with open("README.md", "r") as fh:
 
 from BrianHG_DDR3 import version_str
 
+print("ASDF %s" % setuptools.find_packages())
+
 setuptools.setup(
     name="pythondata-brianhg-ddr3",
     version=version_str,
