@@ -46,6 +46,7 @@ def data_file(f):
 class Ddr3:
     def __init__(self, platform):
         print("ddr3 init add sources at %s" % data_location)
-        platform.add_sources(path=data_location)
         print("ddr3 init done?")
-        self.ddr3 = Instance("BrianHG_DDR3_PHY_SEQ")
+    
+    def get_path():
+        return data_location
