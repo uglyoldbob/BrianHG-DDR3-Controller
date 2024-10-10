@@ -45,19 +45,13 @@ def data_file(f):
 
 class Ddr3:
     def __init__(self, platform):
-        print("ddr3 init add sources at %s" % data_location)
         platform.add_source(os.path.join(data_location, "BrianHG_DDR3_PHY_SEQ_v16.sv"))
         platform.add_source(os.path.join(data_location, "BrianHG_DDR3_GEN_tCK.sv"))
-        platform.add_source(os.path.join(data_location, "BrianHG_DDR3_CMD_SEQUENCER_v16.sv"))
         platform.add_source(os.path.join(data_location, "BrianHG_DDR3_CMD_SEQUENCER_v16.sv"))
         platform.add_source(os.path.join(data_location, "BrianHG_DDR3_PLL.sv"))
         platform.add_source(os.path.join(data_location, "BrianHG_DDR3_FIFOs.sv"))
         platform.add_source(os.path.join(data_location, "BrianHG_DDR3_IO_PORT_ALTERA.sv"))
+        platform.add_source(os.path.join(data_location, "BrianHG_DDR3_CONTROLLER_v16_top.sv"))
+        platform.add_source(os.path.join(data_location, "BrianHG_DDR3_COMMANDER_v16.sv"))
         platform.add_source(os.path.join(data_location, "altera_gpio_lite.sv"))
-        print("ddr3 init done?")
-    
-    def ddr(self):
-        return "BrianHG_DDR3_PHY_SEQ_v16"
-    
-    def get_path(self):
-        return data_location
+
